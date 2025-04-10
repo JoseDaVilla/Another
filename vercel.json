@@ -6,10 +6,6 @@
             "dest": "/api/$1"
         },
         {
-            "src": "/img/(.*)",
-            "dest": "/img/$1"
-        },
-        {
             "handle": "filesystem"
         },
         {
