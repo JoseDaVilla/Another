@@ -4,7 +4,7 @@ const nextConfig = {
   swcMinify: true,
   // Configure output to work better with Vercel
   output: 'standalone',
-  // Explicitly allow images from external domains
+  // Explicitly allow images from external domains if needed
   images: {
     domains: ['mchisdshfjkifranztwi.supabase.co'],
   }

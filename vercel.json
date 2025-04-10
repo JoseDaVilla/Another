@@ -1,47 +1,20 @@
 {
     "version": 2,
-    "builds": [
-        {
-            "src": "package.json",
-            "use": "@vercel/next"
-        },
-        {
-            "src": "*.html",
-            "use": "@vercel/static"
-        }
-    ],
     "routes": [
         {
             "src": "/api/(.*)",
             "dest": "/api/$1"
         },
         {
-            "src": "/*.html",
-            "dest": "/$1.html"
-        },
-        {
-            "src": "/styles.css",
-            "dest": "/styles.css"
-        },
-        {
             "src": "/img/(.*)",
             "dest": "/img/$1"
         },
         {
-            "src": "/(.*\\.svg)",
-            "dest": "/$1"
+            "handle": "filesystem"
         },
         {
-            "src": "/(.*\\.png)",
+            "src": "/(.*)",
             "dest": "/$1"
-        },
-        {
-            "src": "/(.*\\.ico)",
-            "dest": "/$1"
-        },
-        {
-            "src": "/",
-            "dest": "/index.html"
         }
     ]
 }
