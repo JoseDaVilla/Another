@@ -1,23 +1,19 @@
+'use client'
+
 import { useEffect } from 'react'
-import Script from 'next/script'
-import Head from 'next/head'
+import { useRouter } from 'next/navigation'
 
 export default function Home() {
+    const router = useRouter()
+
     useEffect(() => {
-        // Redirect to the static HTML file
-        window.location.href = '/index.html'
-    }, [])
+        // Redirect to the static HTML page
+        router.push('/index.html')
+    }, [router])
 
     return (
-        <>
-            <Head>
-                <title>Another Sizes</title>
-                <meta name="description" content="Moda única para cada ocasión" />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-            <div>
-                <p>Redirigiendo...</p>
-            </div>
-        </>
+        <div className="flex min-h-screen flex-col items-center justify-center">
+            <p>Loading...</p>
+        </div>
     )
 }
